@@ -1,0 +1,33 @@
+{
+  "name": "typescript-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/bot.js",
+  "scripts": {
+    "start": "npm run start:bot",
+    "prestart:bot": "npm run build",
+    "start:bot": "node ./dist/bot.js",
+    "prestart:manager": "npm run build",
+    "start:manager": "node ./dist/manager.js",
+    "dev:bot": "nodemon src/bot.ts",
+    "dev:manager": "nodemon src/manager.ts",
+    "build": "tsc --project tsconfig.json"
+  },
+  "author": "WilhelmRosental",
+  "license": "MIT",
+  "dependencies": {
+    "@fluent/bundle": "^0.17.1",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "typescript-discord-bot": "file:"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
